@@ -6,9 +6,23 @@
 
 body {
     font-family: 'Segoe UI';
+    display: flex;
+    justify-content: center;
 }
 
-button {
+header {
+    position: fixed;
+    display: flex;
+    width: 90%;
+    align-items: center;
+    justify-content: space-between;
+    height: 65px;
+    background-color: rgba(92, 5, 86, 0.35);
+    border-radius: 25px;
+    margin-top: 25px;
+}
+
+#start {
     border-style: none;
     border-radius: 15px;
     padding: 15px;
@@ -19,12 +33,49 @@ button {
     color: white;
     font-weight: 600;
     background-color: rgba(236, 82, 210, 0.75);  
+    cursor: pointer;
 }
 
-.container {
+#start:hover{
+    transform: scale(1.1);
+}
+
+#container {
     height:100vh;
+    width: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    line-height: 35px;
+    text-align: center;
+}
+
+.questioncontainer {
+    height:100vh;
+    width: 50%;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    line-height: 35px;
+}
+
+.questioncontainer ul {
+    margin-top: 25px;
+    list-style: none;
+    width: 50%;
+}
+
+.questioncontainer li {
+    padding: 15px;
+    background-color: rgba(137, 43, 226, 0.47);
+    border-radius: 25px;
+    margin: 10px;
+    text-align: left;
+}
+
+.questioncontainer li:hover {
+    transform: scale(1.1);
+    cursor: pointer;
 }

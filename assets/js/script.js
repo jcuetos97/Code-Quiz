@@ -1,38 +1,51 @@
 
+var container = document.getElementById("container");
+var questioncontainer = document.querySelector("questioncontainer");
 var startquiz = document.getElementById("start");
-
 var count = document.getElementById("counter");
-count.innerHTML = "counter";
+var home = document.getElementById("home");
+
+var wrong = document.getElementById("wrong");
+var right = document.getElementsByClassName("right");
+
+var q1 = document.getElementById("questions1");
+var q2 = document.getElementById("questions2");
+var q3 = document.getElementById("questions3");
+var q4 = document.getElementById("questions4");
+var q5 = document.getElementById("questions5");
+
+var secondsLeft = 75;
 
 
-for (i=75; i>0 ;i--) {
-    if {
+startquiz.addEventListener("click", setTime);
 
-    }
-
-    if else (i===1){ 
-        endquiz()
-    }
-}
 
 function setTime() {
-    // Sets interval in variable
-    var timerInterval = setInterval(function() {
-      secondsLeft--;
-      timeEl.textContent = secondsLeft + " seconds left till colorsplosion.";
+   container.style.display = "none";
+   setQuestions();
+   var timerInterval = setInterval(function() {
+       secondsLeft--;
+      count.textContent = "Time: " + secondsLeft;
+       if(secondsLeft === 0) {
+         clearInterval(timerInterval);
+       }
+     }, 1000);  
+   };
+
+   function setQuestions() {
+      q1.style.display = "flex";
+      console.log(wrong);
+      wrong.onclick =  function () {
+      console.log ("wrong");
+      secondsLeft -=10;
+    }
+
+    right.onclick =  function () {
+      console.log ("right");
+      right.style.backgroundColor = "green";
+    }
+    
+   }; 
+
   
-      if(secondsLeft === 0) {
-        // Stops execution of action at set interval
-        clearInterval(timerInterval);
-        // Calls function to create and append image
-        sendMessage();
-      }
-  
-    }, 1000);
-  }
-
-
-
-function endquiz () {
-
-}
+   

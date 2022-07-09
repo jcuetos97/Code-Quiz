@@ -9,17 +9,67 @@
 </head>
 <body>
     <header>
-        <h1>CODE QUIZ</h1>
-        <div id="counter"></div> 
+        <h1 id="home" style="padding-left: 25px;">/Code.Quiz</h1>
+        <p id="counter" style="padding-right: 25px;"></p>     
     </header>
-    <section class="container" > 
-        <h1>Code Quiz</h1>
-        <p>Try to answer the following code-related questions</p>
-        <button type="button" id="start">Start</button>
+    
+    <section id="container"> 
+        <h1>Coding Quiz Challenge</h1>
+        <p style="padding: 25px;">Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answers will penalize your score/time by ten seconds.</p>
+        <button type="button" id="start"> Start </button>
+    </section>
+
+    <section id="questions1" class="questioncontainer"> 
+        <h1>Commonly used data types DO not include:</h1>
+        <ul>
+            <li onclick="valid=false" class="wrong">Option 1</li>
+            <li class="wrong">Option 2</li>
+            <li class="wrong">Option 3</li>
+            <li class="right">Option 4</li>
+        </ul>
+    </section>
+
+    <section id="questions2" class="questioncontainer"> 
+        <h1>The condition in and if / else</h1>
+        <ul>
+            <li class="wrong">Option 1</li>
+            <li class="wrong">Option 2</li>
+            <li class="wrong">Option 3</li>
+            <li class="correct">Option 4</li>
+        </ul>
+    </section>
+
+    <section id="questions3" class="questioncontainer"> 
+        <h1>String values must</h1>
+        <ul>
+            <li class="correct">Option 1</li>
+            <li class="wrong">Option 2</li>
+            <li class="wrong">Option 3</li>
+            <li class="wrong">Option 4</li>
+        </ul>
+    </section>
+
+    <section id="questions4" class="questioncontainer"> 
+        <h1>A very useful tool</h1>
+        <ul>
+            <li class="wrong">Option 1</li>
+            <li class="wrong">Option 2</li>
+            <li class="correct">Option 3</li>
+            <li class="wrong">Option 4</li>
+        </ul>
+    </section>
+
+    <section id="questions5" class="questioncontainer"> 
+        <h1>Commonly used data types DO not include:</h1>
+        <ul>
+            <li class="correct">Option 1</li>
+            <li class="wrong">Option 2</li>
+            <li class="wrong">Option 3</li>
+            <li class="wrong">Option 4</li>
+        </ul>
     </section>
     
-    
-    
+    <script src="./assets/js/script.js"></script>  
 </body>
-<script src="./assets/js/script.js"></script>
+
 </html>
