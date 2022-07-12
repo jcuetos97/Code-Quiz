@@ -9,10 +9,10 @@
 </head>
 <body>
     <header>
-        <h1 id="home" style="padding-left: 25px;">/Code.Quiz</h1>
-        <p id="counter" style="padding-right: 25px;"></p>     
+        <h1 id="homebttn" style="padding-left: 25px;">/Code.Quiz</h1>   
+        <h3 id="highscorebttn">View high scores</h3>  
     </header>
-    
+
     <section id="container"> 
         <h1>Coding Quiz Challenge</h1>
         <p style="padding: 25px;">Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answers will penalize your score/time by ten seconds.</p>
@@ -69,15 +69,25 @@
         </ul>
     </section>
 
-    <section id="questions5" class="questioncontainer"> 
-        <h1>All done!</h1>
-        <h2>Your final score is "secondsLeft"</h2>
-        Submit
+    <section id="scorecontainer" class="questioncontainer"> 
+        <div id="alldone">
+            <h1>All done!</h1> 
+        </div> 
+        <br>   
+        <form>
+            <input type="text" id="initials" name="initials-input" placeholder="Enter your initials here" />
+            <button id="submitbttn" class="buttonstyle1">Submit</button>
+        </form> 
     </section>
 
-
-
+    <section id="highscorecontainer">
+        <h1>High Scores:</h1>
+        <button class="buttonstyle1">Clear high scores</h1>
+        <button class="buttonstyle1">Go back</h1>
+    </section> 
     
+    <p id="counter" class="footer"></p>  
+
     <script src="./assets/js/script.js"></script>  
 </body>
 

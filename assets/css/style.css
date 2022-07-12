@@ -8,11 +8,13 @@ body {
     font-family: 'Segoe UI';
     display: flex;
     justify-content: center;
+    font-size: 17px;
+    font-weight: 600;
 }
 
 header {
     position: fixed;
-    display: flex;
+    display: inline-flex;
     width: 90%;
     align-items: center;
     justify-content: space-between;
@@ -20,6 +22,7 @@ header {
     background-color: rgba(92, 5, 86, 0.35);
     border-radius: 25px;
     margin-top: 25px;
+    padding-right: 25px;
 }
 
 #start {
@@ -36,10 +39,6 @@ header {
     cursor: pointer;
 }
 
-#start:hover{
-    transform: scale(1.1);
-}
-
 #container {
     height:100vh;
     width: 50%;
@@ -49,6 +48,7 @@ header {
     align-items: center;
     line-height: 35px;
     text-align: center;
+    font-weight: 400;
 }
 
 .questioncontainer {
@@ -80,3 +80,55 @@ header {
     cursor: pointer;
 }
 
+.buttonstyle1 {
+    border-style: none;
+    border-radius: 15px;
+    padding: 12px;
+    padding-left: 25px;
+    padding-right: 25px;
+    font-size: 21px;
+    font-family: 'Segoe UI';
+    color: white;
+    font-weight: 600;
+    background-color: rgba(82, 192, 236, 0.75);  
+    cursor: pointer;
+}
+
+#buttonstyle1:hover, #highscorebttn:hover, #homebttn:hover, #start:hover {
+    transform: scale(1.1);
+}
+
+#initials {
+    border-style: none;
+    border-radius: 15px;
+    padding: 12px;
+    padding-left: 25px;
+    margin-right: 20px;
+    font-size: 21px;
+    font-family: 'Segoe UI';
+    color: white;
+    font-weight: 600;
+    background-color: rgba(144, 169, 179, 0.75);  
+    cursor: pointer;
+}
+
+.counter {
+    position: fixed;
+    bottom: 0;
+    background-color: rgba(58, 8, 55, 0.35);
+    padding: 25px;
+    border-radius: 25px;
+    margin-bottom: 45px;
+}
+
+#highscorecontainer {
+    height:100vh;
+    width: 50%;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 35px;
+    text-align: center;
+    font-weight: 400;
+}
