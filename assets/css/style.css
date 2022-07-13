@@ -94,7 +94,7 @@ header {
     cursor: pointer;
 }
 
-#buttonstyle1:hover, #highscorebttn:hover, #homebttn:hover, #start:hover {
+#buttonstyle1:hover, #highscorebttn:hover, #homebttn:hover, #start:hover, #gobackbttn:hover, #clearbttn:hover {
     transform: scale(1.1);
 }
 

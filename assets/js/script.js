@@ -3,11 +3,14 @@
 var startbttn = document.getElementById("start");
 var submitbttn = document.getElementById("submitbttn");
 var homebttn = document.getElementById("homebttn");
+var clearbttn = document.getElementById("clearbttn");
+var gobackbttn = document.getElementById("gobackbttn");
 
 // Containers
 var scorecontainer = document.getElementById("scorecontainer");
 var container = document.getElementById("container");
 var highscorecontainer = document.getElementById("highscorecontainer");
+var scoreList = document.getElementById("scoreList");
 
 // Time counter
 var count = document.getElementById("counter");
@@ -52,7 +55,7 @@ function setTime() {
       }
       
       }, 1000); 
-  }
+}
   
 // Rendering questions and options
 function setQuestions() {
@@ -99,29 +102,42 @@ function showResults() {
 
 // Submission of initials
 submitbttn.addEventListener ("click", function(event) {
-  // event.preventDefault();
+  event.preventDefault();
   var initialsText = initialsInput.value.trim();
+
+  if (initialsText === "") {
+    return;
+  }
   initials.push(initialsText);
-  
+  initialsInput.value = "";
+  console.log(initials);
   storeinitials();
   highscore();
-  // var storedInitials = JSON.parse(localStorage.getItem("initials"));
-})
+});
 
 // Store scores
-function storeinitials(){
+function storeinitials() {
   localStorage.setItem("initials", JSON.stringify(initials));
 }
+
+// Get store scores
+var storedInitials = JSON.parse(localStorage.getItem("initials"));
+if (storedInitials !== null) {
+    initials = storedInitials;
+  }
 
 // Home button (page reload)
 homebttn.addEventListener ("click", function() {
       window.location.reload();
-})
-
+});
+// Go back button (page reload)
+gobackbttn.addEventListener ("click", function() {
+  window.location.reload();
+});
 // High score button
 highscorebttn.addEventListener ("click", function() {
   highscore();
-})
+});
 
 //Rendering highest scores
 function highscore() {  
@@ -131,15 +147,19 @@ function highscore() {
   if (scorecontainer.style.display = "flex"){
     scorecontainer.style.display = "none";
   }
-  for (var i = 0; i < questions.length; i++) {
+  for (var i = 0; i < questions.length; i++){
     questions[i].style.display = "none";
     count.style.display = "none";
     clearInterval(timerInterval);
   }
   highscorecontainer.style.display = "flex"; 
-  for (var i = 0; i < initials.length; i++) {
-    highscorecontainer.appendChild(initials[i]);
-    console.log(initials[i]);
+  for (var i = 0; i < initials.length; i++){
+    var initial = initials[i];
+
+    var li = document.createElement("li");
+    li.textContent = initial;
+    li.setAttribute("data-index", i);
+    scoreList.appendChild(li);
   }
   }
   
