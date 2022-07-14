@@ -17,8 +17,9 @@ var count = document.getElementById("counter");
 
 // Answer type
 var wrong = document.getElementsByClassName("wrong");
+var wanswer = document.getElementById("wanswer");
 var right = document.getElementsByClassName("right");
-
+var ranswer = document.getElementById("ranswer");
 // Questions
 var q1 = document.getElementById("questions1");
 var q2 = document.getElementById("questions2");
@@ -69,6 +70,10 @@ function setQuestions() {
       secondsLeft -=10;
       value +=1;
       nextQuestion(value);
+      wanswer.style.display = "flex";    
+      setTimeout(function(){
+        wanswer.style.display = "none";
+        },1500);
     }); 
   }
 
@@ -77,6 +82,11 @@ function setQuestions() {
     value  +=1;
     questionscorrect +=1;
     nextQuestion(value);
+    ranswer.style.display = "flex";    
+      setTimeout(function(){
+        ranswer.style.display = "none";
+        },1500);
+
     });
   }
     

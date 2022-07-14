@@ -1,3 +1,5 @@
+
+/* Generals */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -12,6 +14,7 @@ body {
     font-weight: 600;
 }
 
+/* Header, Time, Right & Wrong Answers */
 header {
     position: fixed;
     display: inline-flex;
@@ -26,30 +29,36 @@ header {
     text-align: center;
 }
 
-
 #time {
     position: fixed;
     display: inline-flex;
+    justify-content: center;
     width: 90%;
     top: 100px;
-    padding-left: 25px;
     transition: top 0.3s;   
 }
 
-#start {
-    border-style: none;
-    border-radius: 15px;
-    padding: 15px;
-    padding-left: 25px;
-    padding-right: 25px;
-    font-size: 21px;
-    font-family: 'Segoe UI';
-    color: white;
-    font-weight: 600;
-    background-color: rgba(236, 82, 210, 0.75);  
-    cursor: pointer;
+#counter {
+    position: fixed;
+    left: 75px;
 }
 
+#wanswer {
+    margin: 15px;
+    padding: 7px;
+    background-color: rgba(201, 13, 13, 0.75);
+    color: white;
+    border-radius: 15px;
+} 
+
+#ranswer {
+    margin: 15px;
+    padding: 7px;
+    background-color: rgba(82, 236, 95, 0.75);
+    border-radius: 15px;
+} 
+
+/* Containers */
 #container {
     position: relative;
     margin: 165px;
@@ -67,7 +76,7 @@ header {
 
 .questioncontainer {
     position: relative;
-    margin: 165px;
+    margin: 175px;
     width: 50%;
     min-width: 255px;
     display: none;
@@ -103,6 +112,45 @@ header {
     background-color: rgba(201, 13, 13, 0.75);
 }
 
+#scorecontainer {
+    position: relative;
+    margin: 165px;
+    width: 50%;
+    min-width: 255px;
+    display: none;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 35px;
+}
+
+#highscorecontainer {
+    position: relative;
+    top: 165px;
+    margin: 25px;
+    width: 240px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    line-height: 35px;
+    font-weight: 400;
+}
+
+/* Buttons, Forms and Lists */
+#start {
+    border-style: none;
+    border-radius: 15px;
+    padding: 15px;
+    padding-left: 25px;
+    padding-right: 25px;
+    font-size: 21px;
+    font-family: 'Segoe UI';
+    color: white;
+    font-weight: 600;
+    background-color: rgba(236, 82, 210, 0.75);  
+    cursor: pointer;
+}
 
 .buttonstyle1 {
     border-style: none;
@@ -134,13 +182,11 @@ header {
     cursor: pointer;
 }
 
-
 #scoreList{
     list-style-type: none;
     width:100%;
     text-align: center;
 }
-
 
 #scoreList li{
     padding-left: 12px;
@@ -151,27 +197,3 @@ header {
     font-weight: 600;
 }
 
-#highscorecontainer {
-    position: relative;
-    top: 165px;
-    margin: 25px;
-    width: 240px;
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    line-height: 35px;
-    font-weight: 400;
-}
-
-#scorecontainer {
-    position: relative;
-    margin: 165px;
-    width: 50%;
-    min-width: 255px;
-    display: none;
-    text-align: center;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    line-height: 35px;
-}
