@@ -8,10 +8,14 @@
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
-    <header>
+    <header id="navbar">
         <h1 id="homebttn" style="padding-left: 25px;">/Code.Quiz</h1>   
-        <h3 id="highscorebttn">View high scores</h3>  
+        <h4 id="highscorebttn" style="margin: 12px;">View high scores</h4>  
     </header>
+
+    <section id="time" >
+        <p id="counter"></p> 
+    </section>
 
     <section id="container"> 
         <h1>Coding Quiz Challenge</h1>
@@ -69,7 +73,7 @@
         </ul>
     </section>
 
-    <section id="scorecontainer" class="questioncontainer"> 
+    <section id="scorecontainer"> 
         <div id="alldone">
             <h1>All done!</h1> 
         </div> 
@@ -81,13 +85,11 @@
     </section>
 
     <section id="highscorecontainer">
-        <h1>High Scores:</h1>
+        <h1 style="text-align: center;">High Scores</h1>
         <ul id="scoreList"></ul>
         <button id="clearbttn" class="buttonstyle1">Clear high scores</h1>
         <button id="gobackbttn" class="buttonstyle1">Go back</h1>
-    </section> 
-    
-    <p id="counter" class="footer"></p>  
+    </section>    
 
     <script src="./assets/js/script.js"></script>  
 </body>

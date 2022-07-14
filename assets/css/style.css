@@ -22,7 +22,18 @@ header {
     background-color: rgba(92, 5, 86, 0.35);
     border-radius: 25px;
     margin-top: 25px;
-    padding-right: 25px;
+    transition: top 0.3s;
+    text-align: center;
+}
+
+
+#time {
+    position: fixed;
+    display: inline-flex;
+    width: 90%;
+    top: 100px;
+    padding-left: 25px;
+    transition: top 0.3s;   
 }
 
 #start {
@@ -40,8 +51,10 @@ header {
 }
 
 #container {
-    height:100vh;
+    position: relative;
+    margin: 165px;
     width: 50%;
+    min-width: 255px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -49,11 +62,14 @@ header {
     line-height: 35px;
     text-align: center;
     font-weight: 400;
+   
 }
 
 .questioncontainer {
-    height:100vh;
+    position: relative;
+    margin: 165px;
     width: 50%;
+    min-width: 255px;
     display: none;
     flex-direction: column;
     justify-content: center;
@@ -64,7 +80,6 @@ header {
 .questioncontainer ul {
     margin-top: 25px;
     list-style: none;
-    width: 50%;
 }
 
 .questioncontainer li {
@@ -80,12 +95,20 @@ header {
     cursor: pointer;
 }
 
+.questioncontainer li.right:active {
+    background-color: rgba(82, 236, 95, 0.75);
+}
+
+.questioncontainer li.wrong:active {
+    background-color: rgba(201, 13, 13, 0.75);
+}
+
+
 .buttonstyle1 {
     border-style: none;
     border-radius: 15px;
     padding: 12px;
-    padding-left: 25px;
-    padding-right: 25px;
+    margin: 12px;
     font-size: 21px;
     font-family: 'Segoe UI';
     color: white;
@@ -94,7 +117,7 @@ header {
     cursor: pointer;
 }
 
-#buttonstyle1:hover, #highscorebttn:hover, #homebttn:hover, #start:hover, #gobackbttn:hover, #clearbttn:hover {
+.buttonstyle1:hover, #highscorebttn:hover, #homebttn:hover, #start:hover, #gobackbttn:hover, #clearbttn:hover {
     transform: scale(1.1);
 }
 
@@ -102,8 +125,7 @@ header {
     border-style: none;
     border-radius: 15px;
     padding: 12px;
-    padding-left: 25px;
-    margin-right: 20px;
+    margin: 20px;
     font-size: 21px;
     font-family: 'Segoe UI';
     color: white;
@@ -112,23 +134,44 @@ header {
     cursor: pointer;
 }
 
-.counter {
-    position: fixed;
-    bottom: 0;
-    background-color: rgba(58, 8, 55, 0.35);
-    padding: 25px;
-    border-radius: 25px;
-    margin-bottom: 45px;
+
+#scoreList{
+    list-style-type: none;
+    width:100%;
+    text-align: center;
+}
+
+
+#scoreList li{
+    padding-left: 12px;
+    margin: 7px;
+    background-color:rgba(144, 169, 179, 0.75); 
+    color: black;
+    border-radius: 15px;
+    font-weight: 600;
 }
 
 #highscorecontainer {
-    height:100vh;
-    width: 50%;
+    position: relative;
+    top: 165px;
+    margin: 25px;
+    width: 240px;
     display: none;
+    flex-direction: column;
+    align-items: center;
+    line-height: 35px;
+    font-weight: 400;
+}
+
+#scorecontainer {
+    position: relative;
+    margin: 165px;
+    width: 50%;
+    min-width: 255px;
+    display: none;
+    text-align: center;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     line-height: 35px;
-    text-align: center;
-    font-weight: 400;
 }
